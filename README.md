@@ -40,6 +40,8 @@ Instructions to build and test docker images using the command line are as follo
 
 ### Screenshots for TrialCurate interface ###
 
+![Connect to clinicaltrials.gov API] (images/curate01.png)
+
 **Check curation results**
 
 #### To check if the clinical trial you curated is saved correctly and exists in mongo database, check by doing #### 
