@@ -42,19 +42,17 @@ Instructions to build and test docker images using the command line are as follo
 
 ![Connect to clinicaltrials.gov API](images/curate01.png)
 
-<img src="images/curate02.tiff" alt="Disease and stage">
+![Disease and stage](images/curate03.png)
 
-![Disease and stage](images/curate02.tiff)
+![Line of therapy](images/curate04.png)
 
-![Line of therapy](images/curate03.tiff)
+![Biomarkers](images/curate05.png)
 
-![Biomarkers](images/curate04.tiff)
+![Biomarkers details](images/curate06.png)
 
-![Biomarkers details](images/curate05.tiff)
+![Documentation](images/curate07.png)
 
-![Documentation](images/curate06.tiff)
-
-![Overview](images/curate07.tiff)
+![Overview](images/curate08.png)
 
 **Check curation results**
 
@@ -79,6 +77,14 @@ This should show the complete information for the curated clinical trial.
 #### To edit a clinical trial ####
 
 ### Screenshots for TrialEdit interface ###
+
+![select trial](images/edit01.png)
+
+![Trial Part Ia](images/edit03.png)
+
+![Trial Part Ib](images/edit04.png)
+
+![Trial Part II](images/edit05.png)
 
 **Check any edited trial**
 
