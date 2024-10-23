@@ -38,11 +38,11 @@ Instructions to build and test docker images using the command line are as follo
 
 ```docker-compose down -v```
 
-###### Screenshots for TrialCurate interface ######
+### Screenshots for TrialCurate interface ###
 
 **Check curation results**
 
-**To check if the clinical trial you curated is saved correctly and exists in mongo database, check by doing**
+#### To check if the clinical trial you curated is saved correctly and exists in mongo database, check by doing #### 
 
 ```docker exec -it mongocontainerid mongosh```
 
@@ -60,18 +60,18 @@ You should see 1.
 
 This should show the complete information for the curated clinical trial. 
 
-#####To edit a clinical trial#####
+#### To edit a clinical trial ####
 
-###### Screenshots for TrialEdit interface ######
+### Screenshots for TrialEdit interface ###
 
 **Check any edited trial**
 
 - Repeat the same steps as above you did to check the newly curated trial. You will see the change you saved for the selected clinical trial in the mongo database. 
 - You can also check directly in the TrialEdit interface by clicking the trial and looking at the two tabs Trial Part 1 and Trial Part 2.
 
-#####To browse clinical trials#####
+#### To browse clinical trials ####
 
-###### Screenshots for TrialBrowse interface ######
+### Screenshots for TrialBrowse interface ###
 
 **Check clinical trials using TrialBrowse interface**
 
