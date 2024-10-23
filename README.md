@@ -40,7 +40,7 @@ Instructions to build and test docker images using the command line are as follo
 
 ### Screenshots for TrialCurate interface ###
 
-![Connect to clinicaltrials.gov API] (images/curate01.png)
+![Connect to clinicaltrials.gov API](images/curate01.png)
 
 **Check curation results**
 
