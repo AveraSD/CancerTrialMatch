@@ -40,19 +40,34 @@ Instructions to build and test docker images using the command line are as follo
 
 ### Screenshots for TrialCurate interface ###
 
+**Connect to clinicaltrials.gov API**
+
 ![Connect to clinicaltrials.gov API](images/curate01.png)
+
+**Disease and stage**
 
 ![Disease and stage](images/curate03.png)
 
+**Line of therapy**
+
 ![Line of therapy](images/curate04.png)
+
+**Biomarkers**
 
 ![Biomarkers](images/curate05.png)
 
+**Biomarkers details**
+
 ![Biomarkers details](images/curate06.png)
+
+**Documentation**
 
 ![Documentation](images/curate07.png)
 
+**Overview**
+
 ![Overview](images/curate08.png)
+
 
 **Check curation results**
 
@@ -78,11 +93,19 @@ This should show the complete information for the curated clinical trial.
 
 ### Screenshots for TrialEdit interface ###
 
+**Select trial to edit**
+
 ![select trial](images/edit01.png)
+
+**Trial Part I**
 
 ![Trial Part Ia](images/edit03.png)
 
+**Trial Part I**
+
 ![Trial Part Ib](images/edit04.png)
+
+**Trial Part II**
 
 ![Trial Part II](images/edit05.png)
 
@@ -94,6 +117,31 @@ This should show the complete information for the curated clinical trial.
 #### To browse clinical trials ####
 
 ### Screenshots for TrialBrowse interface ###
+
+**Browse main display**
+
+![Browse main display](images/browse01.png)
+
+**Browse with sidebar menu**
+
+![Browse with sidebar menu](images/browse02.png)
+
+**Browse with closed trials**
+
+![Browse with closed trials](images/browse03.png)
+
+**Use search criteria**
+
+![Search criteria](images/browse04.png)
+
+**Browse with column selection**
+
+![Browse with column selection](images/browse05.png)
+
+**Browse with search box**
+
+![Browse with search box](images/browse07.png)
+
 
 **Check clinical trials using TrialBrowse interface**
 
