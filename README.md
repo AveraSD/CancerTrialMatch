@@ -42,6 +42,8 @@ Instructions to build and test docker images using the command line are as follo
 
 ![Connect to clinicaltrials.gov API](images/curate01.png)
 
+<img src="images/curate02.tiff" alt="Disease and stage">
+
 ![Disease and stage](images/curate02.tiff)
 
 ![Line of therapy](images/curate03.tiff)
