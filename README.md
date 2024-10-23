@@ -38,7 +38,7 @@ Instructions to build and test docker images using the command line are as follo
 
 ```docker-compose down -v```
 
-######Screenshots for TrialCurate interface######
+###### Screenshots for TrialCurate interface ######
 
 **Check curation results**
 
@@ -62,7 +62,7 @@ This should show the complete information for the curated clinical trial.
 
 #####To edit a clinical trial#####
 
-######Screenshots for TrialEdit interface######
+###### Screenshots for TrialEdit interface ######
 
 **Check any edited trial**
 
@@ -71,7 +71,7 @@ This should show the complete information for the curated clinical trial.
 
 #####To browse clinical trials#####
 
-######Screenshots for TrialBrowse interface######
+###### Screenshots for TrialBrowse interface ######
 
 **Check clinical trials using TrialBrowse interface**
 
