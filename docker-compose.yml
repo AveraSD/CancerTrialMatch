@@ -1,0 +1,130 @@
+
+services:
+  trial_curate:
+    image: shiny-apps:latest
+    ports:
+      - "3838"
+#   networks:
+ #    - app-net
+    container_name: trial_curate
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+#adding environment variables
+    environment:
+      - MONGO_HOST=mongodba
+      - MONGO_PORT=27017
+      - MONGO_URL="mongodb://mongodba:27017/aci"
+    depends_on:
+      - mongodba
+  mongodba:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    container_name: mongodba
+    volumes:
+      #- ./data/db:/data/db:ro
+     # - ./TrialCurate/data/trials:/data/trials
+     # - ./TrialCurate/mongo/db_init.sh:/docker-entrypoint-initdb.d/db_init.sh:ro
+       - ./TrialCurate:/srv/shiny-server/TrialCurate
+       - ./TrialCurate/data/trials:/data/trials:rw
+       - ./TrialCurate/data/oncotree:/data/oncotree:ro
+       - ./TrialCurate/data/metadata:/data/metadata:ro
+       - ./TrialCurate/data/pt:/data/pt:ro
+
+#       - ./mongo/db_init.sh:/docker-entrypoint-initdb.d/db_init.sh:ro
+  #  networks:
+   #   - app-net
+#networks:
+ #app-net:
+  #name: app-net
+
+# TrialEdit
+
+#services:
+  trial_edit:
+  #  build: .
+    image: shiny-apps:latest
+    ports:
+      - "3838" # host:container
+#    networks:
+ #     - app-net
+    container_name: trial_edit
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+#adding environment variables
+    environment:
+      - MONGO_HOST=mongodbb     #mongodba to mongodbb
+      - MONGO_PORT=27017
+      - MONGO_URL="mongodb://mongodbb:27017/aci"    #mongodbb change
+    depends_on:
+      - mongodbb
+  mongodbb:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27018:27017
+    container_name: mongodbb
+    volumes:
+       - ./TrialEdit:/srv/shiny-server/TrialEdit
+       - ./TrialEdit/data/trials:/data/trials:rw
+       - ./TrialEdit/data/oncotree:/data/oncotree:ro
+       - ./TrialEdit/data/metadata:/data/metadata:ro
+       - ./TrialEdit/data/pt:/data/pt:ro
+       - ./TrialEdit/docker-entrypoint-initdb.d/db_init.sh:/docker-entrypoint-initdb.d/db_init.sh:ro
+#       - ./TrialEdit:/srv/shiny-server/TrialEdit
+#    networks:
+ #     - app-net
+#networks:
+ #app-net:
+  #name: app-net
+
+#TrialBrowse
+
+#services:
+  trial_browse:
+  #  build: .
+    image: shiny-apps:latest
+    ports:
+      - "3838" # host:container
+  #  networks:
+   #   - app-net
+   # image: shiny-apps:latest
+    container_name: trial_browse
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+#adding environment variables
+    environment:
+      - MONGO_HOST=mongodbc
+      - MONGO_PORT=27017
+      - MONGO_URL="mongodb://mongodbc:27017/aci"
+    depends_on:
+      - mongodbc
+  mongodbc:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27019:27017
+    container_name: mongodbc
+    volumes:
+       - ./TrialBrowse:/srv/shiny-server/TrialBrowse
+       - ./TrialBrowse/data/trials:/data/trials:ro
+       - ./TrialBrowse/docker-entrypoint-initdb.d/db_init.sh:/docker-entrypoint-initdb.d/db_init.sh:ro
+  #  networks:
+   #   - app-net
+#networks:
+ #app-net:
+  #name: app-net
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"  # Nginx listens on port 80 for HTTP traffic
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Mount the Nginx config file
+    depends_on:
+      - trial_curate
+      - trial_edit
+      - trial_browse
+
