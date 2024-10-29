@@ -1,4 +1,5 @@
 # CancerTrialMatch
+
 TrialCurate, TrialEdit, TrialBrowse are the three shiny interfaces to curate, edit and search clinical trials. 
 
 The source code for the three shiny interfaces: TrialCurate, TrialEdit, TrialBrowse are available at
@@ -17,11 +18,11 @@ All the three shiny app interfaces are dockerized.
 
 Instructions to build and test docker images using the command line are as follows:
 
-**Go to the main folder where Dockerfile is located and do**
+**Go to the main folder where Dockerfile is located and do:**
 
 ```docker build -t shiny-apps . ```
 
-**Go to the main folder where docker-compose is located and do**
+**Go to the main folder where docker-compose is located and do:**
 
 ```docker-compose up --build```
 
@@ -56,7 +57,7 @@ Instructions to build and test docker images using the command line are as follo
 
 ![Disease and stage](images/curate03.png)
 
-**Line of therapy**
+**Line of therapy and arm status**
 
 ![Line of therapy](images/curate04.png)
 
@@ -72,7 +73,7 @@ Instructions to build and test docker images using the command line are as follo
 
 ![Documentation](images/curate07.png)
 
-**Overview**
+**Overview and confirm**
 
 ![Overview](images/curate08.png)
 
