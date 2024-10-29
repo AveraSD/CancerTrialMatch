@@ -3,11 +3,11 @@ TrialCurate, TrialEdit, TrialBrowse are the three shiny interfaces to curate, ed
 
 The source code for the three shiny interfaces: TrialCurate, TrialEdit, TrialBrowse are available at
 
-[TrialCurate] (https://github.com/AveraSD/TrialCurate)
+[TrialCurate] (https://github.com/AveraSD/CancerTrialMatch/TrialCurate)
 
-[TrialEdit] (https://github.com/AveraSD/TrialEdit)
+[TrialEdit] (https://github.com/AveraSD/CancerTrialMatch/TrialEdit)
 
-[TrialBrowse] (https://github.com/AveraSD/TrialBrowse)
+[TrialBrowse] (https://github.com/AveraSD/CancerTrialMatch/TrialBrowse)
 
 Examples of NCT identifiers to use for curation : NCT02428712, NCT03662126, NCT05361395 
 
@@ -17,7 +17,11 @@ All the three shiny app interfaces are dockerized.
 
 Instructions to build and test docker images using the command line are as follows:
 
-**Go to the folder where docker-compose is located and type**
+**Go to the main folder where Dockerfile is located and do**
+
+```docker build -t shiny-apps . ```
+
+**Go to the main folder where docker-compose is located and do**
 
 ```docker-compose up --build```
 
@@ -25,20 +29,24 @@ Instructions to build and test docker images using the command line are as follo
 
 ```docker ps```
 
+**To check docker containers:**
+
+```docker ps -a```
+
 **Access the Shiny apps through a web browser at:**
 
-[TrialCurate] http://127.0.0.1:3838/TrialCurate/
+[TrialCurate] http://127.0.0.1/TrialCurate/
 
-[TrialEdit] http://127.0.0.1:3838/TrialEdit/
+[TrialEdit] http://127.0.0.1/TrialEdit/
 
-[TrialBrowse] http://127.0.0.1:3838/TrialBrowse/
+[TrialBrowse] http://127.0.0.1/TrialBrowse/
 
 
 **To remove and clean up docker images, containers, builds etc.**
 
 ```docker-compose down -v```
 
-### Screenshots for TrialCurate interface ###
+### How to curate using TrialCurate interface ###
 
 **Connect to clinicaltrials.gov API**
 
@@ -91,7 +99,7 @@ This should show the complete information for the curated clinical trial.
 
 #### To edit a clinical trial ####
 
-### Screenshots for TrialEdit interface ###
+### How to edit existing trials using TrialEdit interface ###
 
 **Select trial to edit**
 
@@ -116,7 +124,7 @@ This should show the complete information for the curated clinical trial.
 
 #### To browse clinical trials ####
 
-### Screenshots for TrialBrowse interface ###
+### How to browse trials using TrialBrowse interface ###
 
 **Browse main display**
 
