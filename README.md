@@ -104,6 +104,14 @@ This should show the complete information for the curated clinical trial.
 
 **Select trial to edit**
 
+There are two parts: Trial Part I (consists of 4 sections) and Trial Part 2 (consists of 2 sections) and a submit button on the top of the page to finally submit the trial after making changes.
+
+Each section has a table and click on any cell inside the table where you need to make a change and then click on "Save Verify" button to save the change you made.
+
+In case you do not have any change in any section, **you still** have to click on "Save Verify" button in each section. 
+
+Click on "Save Verify" button on all sections and then hit the "Submit button" on the top of the page to save the trial to the database. This will avoid "Disconnected from the server" error.
+
 ![select trial](images/edit01.png)
 
 **Trial Part I**
