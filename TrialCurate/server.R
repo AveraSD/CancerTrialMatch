@@ -32,6 +32,20 @@ source(here("R", "add_trials.R"))
 
 server <- function(input, output, session) {
   
+  #validation check starts
+  observeEvent(input$inNav, {
+    # Check if the user is leaving Tab 3 without completing info1 or info2
+    #  if (input$inNav == "Biomarker" && (input$lineTx == "" || input$armStatus == "")) {
+    if (input$inNav == "Documents" && (is.null(input$lineTx) || input$lineTx == "" || is.null(input$armStatus) || input$armStatus == "" || is.null(input$selec) || input$selec == "" ||
+                                       is.null(input$gene1) || input$gene1 == "" || is.null(input$typ) || input$typ == ""  || is.null(input$var) || input$var == "" || is.null(input$func) || input$func == "" || is.null(input$gene2) || input$gene2 == "")) {
+      shinyjs::alert("Please complete Line of Therapy, Arm status and Biomarker information before proceeding. If no information is available for any of these, then select Not available and click green plus button.")
+      
+      # Automatically send the user back to Tab 3 if fields are incomplete
+      updateTabsetPanel(session, "inNav", selected = "Biomarker")
+    }
+  })
+  #validation check ends
+  
   
   ##### Panel 1: NCT ID + query trial
   

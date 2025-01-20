@@ -139,15 +139,15 @@ shinyServer(function(input, output,session) {
     checklineoftxSel = browse_tbl %>% select(NCT,arms) %>% unnest(arms) %>% separate_rows(line_of_therapy,sep = ";") %>% filter(line_of_therapy %in% SelLineofTx) %>% select(NCT) %>% distinct()
    
     SelLocat = as.list.data.frame(input$locaFil)
-  #  checklocat = browse_tbl %>% select(NCT,Location) %>% filter(Location %in%  SelLocat) %>% select(NCT) %>% distinct()
+    checklocat = browse_tbl %>% select(NCT,Location) %>% filter(Location %in%  SelLocat) %>% select(NCT) %>% distinct()
     
     # add seperate_rows
-    checklocat = browse_tbl %>% select(NCT,Location) %>% separate_rows(Location,sep = "\\s*;s*") %>% filter(str_detect(Location, paste(SelLocat, collapse = "|"))) %>% select(NCT) %>% distinct()
+  #  checklocat = browse_tbl %>% select(NCT,Location) %>% separate_rows(Location,sep = "\\s*;s*") %>% filter(str_detect(Location, paste(SelLocat, collapse = "|"))) %>% select(NCT) %>% distinct()
     
     
     SelTrialty = as.list.data.frame(input$trialTyxFil) # Ui name
-  #  checktrlTy = browse_tbl %>% select(NCT,JIT) %>% filter(JIT %in%  SelTrialty) %>% select(NCT) %>% distinct()
-    checktrlTy = browse_tbl %>% select(NCT,JIT) %>% filter(str_detect(JIT, paste(SelTrialty,collapse = "|"))) %>% select(NCT) %>% distinct()
+    checktrlTy = browse_tbl %>% select(NCT,JIT) %>% filter(JIT %in%  SelTrialty) %>% select(NCT) %>% distinct()
+  #  checktrlTy = browse_tbl %>% select(NCT,JIT) %>% filter(str_detect(JIT, paste(SelTrialty,collapse = "|"))) %>% select(NCT) %>% distinct()
     
     # ----------------------------------------------------------------------------------------------------------------------- #
     # part 2 options 
