@@ -65,6 +65,27 @@ ui <- dashboardPage(
                     '.btn-ltgreen {background-color: #72AA85; color: white ;}',
                     '.btn-tan {background-color: #9D9666; color: white ;}',
                     
+                    #new added hyperlink color
+                    'a {
+                      color: black !important;
+                    }',
+                    'a:visited {
+                      color: brown !important; /* visited links color */
+                    }',
+                    
+                    'a:hover {
+                      color: blue !important; /* hovered over color */
+                    }',
+                    
+                    'a:active {
+                      color: red !important; /* link clicked color */
+                    }',
+                    'h5 {
+                      color: black !important;}',
+                    
+                    #new added hyperlink colors end
+                    
+                    
                     #   '.skin-blue .sidebar .checkbox .control-label { color: black;}' 
     )),
     
@@ -170,6 +191,17 @@ ui <- dashboardPage(
        
                                       checkboxInput("show_closed","show closed trials",value = FALSE),
        
+       br(),
+       br(),
+       br(),
+       h5("Click below for curating a clinical trial"),
+       br(),
+       tags$a(href="http://127.0.0.1/TrialCurate" ,target="_blank","TrialCurate"),
+       br(),
+       br(),
+       h5("Click below for editing a clinical trial"),
+       br(),
+       tags$a(href="http://127.0.0.1/TrialEdit" ,target="_blank","TrialEdit"),
        
                            #, #fluidrow
 
