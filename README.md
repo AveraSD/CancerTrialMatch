@@ -1,8 +1,8 @@
 # CancerTrialMatch
 
-TrialCurate, TrialEdit, TrialBrowse are the three shiny interfaces to curate, edit and search clinical trials. 
+TrialCurate, TrialEdit, TrialBrowse are the three shiny apps to curate, edit and search clinical trials. 
 
-The source code for the three shiny interfaces: TrialCurate, TrialEdit, TrialBrowse are available at
+The source code for the three shiny apps: TrialCurate, TrialEdit, TrialBrowse are available at
 
 [TrialCurate] (https://github.com/AveraSD/CancerTrialMatch/TrialCurate)
 
@@ -12,9 +12,9 @@ The source code for the three shiny interfaces: TrialCurate, TrialEdit, TrialBro
 
 Examples of NCT identifiers to use for curation : NCT02428712, NCT03662126, NCT05361395 
 
-Install Docker desktop and enable WSL integration in case of windows.
+Install Docker desktop and enable WSL integration in the case of windows.
 
-All the three shiny app interfaces are dockerized. 
+All the three shiny apps are dockerized. 
 
 Instructions to build and test docker images using the command line are as follows:
 
